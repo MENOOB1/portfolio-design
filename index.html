@@ -20,10 +20,13 @@
     <div class="container">
         <!-- starting page -->
         <section class="banner-page">
+            <div class="mobile-navbar">
+                
+            </div>
             <div class="banner-page-item">
                 <div class="nav-bar">
                     <!-- <p><img src="./jhalar.png" alt=""></p> -->
-                    <div class="left-btn selected">
+                    <div class="left-btn selected" >
                         <a href="">home</a>
                         <a href="">project</a>
                         <a href="">Experience</a>
@@ -31,6 +34,11 @@
                     </div>
                     <div class="right-btn">
                         <a href="" class="">let's talk</a>
+                    </div>
+                    <div class="hamburg" style="display: none;">
+                        <span class="material-icons menu">
+                            menu
+                            </span>
                     </div>
                 </div>
                 <div class="banner-intro">
@@ -53,9 +61,9 @@
                     </div>
                 </div>
                 <div class="social-links">
-                    <div class="circle"> <i class="fab fa-github fa-2x"></i></div>
-                    <div class="circle"> <i class="fab fa-twitter fa-2x"></i></div>
-                    <div class="circle"> <i class="fab fa-linkedin fa-2x"></i></div>
+                    <div class="circle fir"> <i class="fab fa-github fa-2x"></i></div>
+                    <div class="circle sec"> <i class="fab fa-twitter fa-2x"></i></div>
+                    <div class="circle third"> <i class="fab fa-linkedin fa-2x"></i></div>
 
                 </div>
             </div>
@@ -64,7 +72,7 @@
             <div class="project-container">
                 <div class="project-heading">
                     <div class="sec-text">My Projects</div>
-                    <div class="para-text">MY Special Projects</div>
+                    <!-- <div class="para-text">MY Special Projects</div> -->
                 </div>
                 <div class="project-list">
                     <div class="box tilt">
@@ -74,9 +82,6 @@
                     </div>
 
                     <div class="two-projects ">
-                        <div class="actual-project"></div>
-                        <div class="actual-project"></div>
-
                         <div class="actual-project"></div>
                         <div class="actual-project"></div>
                     </div>
@@ -212,9 +217,35 @@
         max: 20,
         speed: 1000
     });
-
-    // let project=document.querySelector
+    let ham=document.querySelector(".hamburg");
+    window.addEventListener('resize',function(){
+        // console.log(window.innerHeight);
+        if(window.innerWidth<=1000)
+        {
+            // console.log("he");
+            ham.style.display="";
+        }
+        else{
+            ham.style.display="none";
+        }
+    })
+    window.onload=function(){
+        if(window.innerWidth<=1000)
+        {
+            ham.style.display="";
+        }
+        else{
+            ham.style.display="none";
+        }
+    }
+    let navbar=document.querySelector(".menu")
+    let mobile=document.querySelector(".mobile-navbar")
+    navbar.addEventListener("click",function(){
+        mobile.style.display="";
+        mobile.classList.add("nav-select")
+    })
 
 </script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js " defer></script>
+<script src="fun.js" defer></script>
 </html>

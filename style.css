@@ -8,6 +8,7 @@ body{
 }
 /* statring page design */
 .banner-page{
+    display: flex;
 }
 .banner-page-item{
     height: 100%;
@@ -34,6 +35,7 @@ body{
 }
 .banner-intro{
     width: 70%;
+    min-height: 38rem;
     height: calc(100vh - 12rem);
     display: flex;
 }
@@ -114,12 +116,16 @@ body{
 /* social design */
 
 .social-links{
-    position: relative;
+    /* position: relative; */
     height: 3rem;
     width: 50%;
     display: flex;
     justify-content: flex-end;
     /* margin-left: 1rem; */
+}
+.hamburg{
+    width: 100%;
+    /* visibility: hidden; */
 }
 @media (max-height:830px ){
     .basic-Intro
@@ -140,7 +146,7 @@ body{
         padding-top: 2rem;
     }
 }
-@media (max-width:600px)
+@media (max-width:1000px)
 {
     .basic-Intro
     {
@@ -161,14 +167,24 @@ body{
     .banner-logo{
        display: none;
     }
-.banner-page-item{
-    padding: 0px;
+    .banner-page-item{
+        padding: 0px;
+    }
+    .nav-bar .left-btn{
+        background-color: red;
+        display: none;
+    }
+    .right-btn{
+        display: none;
+    }
+    .hamburg{
+        text-align: end;
+        display: auto;
+    }
+    .hamburg .material-icons:hover{
+        cursor: pointer;
+    }
 }
-}
-
-
-
-
 
 
 /* ===================navbar design */
@@ -214,26 +230,29 @@ body{
 }
 
 
+
 .right-btn a{
-    width: 90%;
-    /* text-align: left; */
+    /* text-align: center; */
+    width: 100%;
+    min-width: 7rem;
     font-size: 12px;
     letter-spacing: 2px;
     color: rgba(26, 26, 88, 0.945);
     text-transform: uppercase;
     font-weight: 700;
     height: 2.5rem;
-    padding: 1rem;
+    padding-right: 1rem;
+
     display: flex;
     justify-content: flex-end;
     align-items: center;
     transition: 1s;
-    margin-left:2rem;
     text-decoration: none;
 }
 
 .circle{
     /* border: 1px solid black; */
+    /* position: fixed; */
     margin-left: 1rem;
     height: 100%;
     width: 3rem;
@@ -253,6 +272,22 @@ body{
     padding: 0.5rem 0.6rem;
 }
 
+
+.mobile-navbar{
+    background-color: red;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+
+    z-index: 100;
+    /* display: none; */
+    visibility: hidden;
+}
+.nav-select
+{
+    visibility: visible;
+    transition: 1s;
+}
 
 
 /* =========project Area============= */
