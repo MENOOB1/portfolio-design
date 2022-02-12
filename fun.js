@@ -17,8 +17,12 @@ social2.addEventListener("mouseenter",function(){
 
 })
 
-
+gsap.to(".box",{x:-2000})
+gsap.to(".tab",{x:3500})
 var t1=gsap.timeline();
 t1.from('.nav-bar',{duration:2,x:'-100%' ,ease:'elastic'})
 t1.to('.get-cv-btn',{y:'100%', ease:'bounce'})
 gsap.from(".social-links",{duration:2,y:-1000})
+t1.from(".box",{ x:-2000})
+
+t1.from(".tab",{ x:1000})
