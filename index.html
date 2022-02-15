@@ -14,14 +14,17 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
     <div class="container">
         <!-- starting page -->
         <section class="banner-page">
-            <div class="mobile-navbar">
-                
+            <div class="mobile-navbar" style="display: none;"  data-aos="fade-down">
+                <span class="material-icons">
+                    cancel
+                    </span>
             </div>
             <div class="banner-page-item">
                 <div class="nav-bar">
@@ -42,7 +45,7 @@
                     </div>
                 </div>
                 <div class="banner-intro">
-                    <div class="basic-Intro">
+                    <div class="basic-Intro" data-aos="fade-right">
                         <div class="main-text">Heyy</div>
                         <div class="sec-text">i'm rohit</div>
                         <div class="para-text">
@@ -56,7 +59,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="banner-logo">
+                    <div class="banner-logo" data-aos="fade-left">
                         <img src="./images/banner.png" alt="">
                     </div>
                 </div>
@@ -75,15 +78,15 @@
                     <!-- <div class="para-text">MY Special Projects</div> -->
                 </div>
                 <div class="project-list">
-                    <div class="box tilt">
+                    <div class="box tilt" data-aos="fade">
                         <p>spreadsheeter</p>
-                        <img src="./images/bubble.png" class="bubble" alt="">
+                        <img src="./images/bubble.png" class="bubble" alt="" >
                         <img src="./images/tab(1).png" class="tab" alt="">
                     </div>
 
                     <div class="two-projects ">
-                        <div class="actual-project"></div>
-                        <div class="actual-project"></div>
+                        <div class="actual-project" data-aos="fade-right"></div>
+                        <div class="actual-project" data-aos="fade-left"></div>
                     </div>
                     <div class="btn">
                         <div class="get-cv-btn"> PROJECT <div>></div>
@@ -94,7 +97,7 @@
         </section>
 
         <!-- Technologies -->
-        <section class="tech">
+        <section class="tech"  data-aos="fade-left">
             <!-- technology language -->
             <div class="technology-title">
                 Technology
@@ -102,12 +105,12 @@
             <div class="sub-heading"> i worked on</div>
 
             <div class="lang">
-                <div class="one">
+                <div class="one" data-aos="fade-left">
                     <div class="element ">
                         <img src="./images/java.png" alt="">
                     </div>
                 </div>
-                <div class="two">
+                <div class="two" data-aos="fade-right">
                     <div class="element">
                         <img src="./images/sql.png" alt="">
                     </div>
@@ -115,7 +118,7 @@
                         <img src="./images/jquert.png" alt="">
                     </div>
                 </div>
-                <div class="three">
+                <div class="three" data-aos="fade-down">
                     <div class="element">
                         <img src="./images/django.png" alt="">
                     </div>
@@ -126,7 +129,7 @@
                         <img src="./images/html.png" alt="">
                     </div>
                 </div>
-                <div class="two">
+                <div class="two" data-aos="fade-left">
                     <div class="element">
                         <img src="./images/boot.png" alt="">
                     </div>
@@ -134,7 +137,7 @@
                         <img src="./images/js.png" alt="">
                     </div>
                 </div>
-                <div class="one">
+                <div class="one" data-aos="fade-right">
                     <div class="element">
                         <img src="./images/react.png" alt="">
                     </div>
@@ -142,13 +145,13 @@
             </div>
 
             <!-- Experience  -->
-            <div class="experience">
+            <div class="experience" data-aos="fade-right">
                 <div class="technology-title">
                     Experience
                 </div>
                 <div class="sub-heading"> where i worked</div>
 
-                <div class="company">
+                <div class="company" data-aos="fade-left">
                         <img src="./images/bg.png" alt="">
                         
                     <div class="company-worked-description">
@@ -158,7 +161,7 @@
                         totam aspernatur porro velit minus. In nihil culpa eius?</div>
                 </div>
 
-                <div class="company">
+                <div class="company" data-aos="fade-right">
                     <img src="./images/bg.png" alt="">
                     
                 <div class="company-worked-description">
@@ -208,6 +211,14 @@
     </div>
 </body>
 <script src="./vanilatilt.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset: 450, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 1000, 
+  });
+</script>
 <script>
     VanillaTilt.init(document.querySelectorAll(".tilt"), {
         max: 2,
@@ -243,8 +254,22 @@
     navbar.addEventListener("click",function(){
         mobile.style.display="";
         mobile.classList.add("nav-select")
+        disableScroll();
     })
-
+    function disableScroll() {
+    // Get the current page scroll position
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+  
+        // if any scroll is attempted, set this to the previous value
+        window.onscroll = function() {
+            window.scrollTo(scrollLeft, scrollTop);
+        };
+}
+  
+function enableScroll() {
+    window.onscroll = function() {};
+}
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js " defer></script>
 <script src="fun.js" defer></script>

@@ -5,6 +5,7 @@
 body{
     margin: 0px;
     padding: 0px;
+    overflow-x: hidden;
 }
 /* statring page design */
 .banner-page{
@@ -274,19 +275,34 @@ body{
 
 
 .mobile-navbar{
-    background-color: red;
+    background-color: rgba(26, 26, 88, 0.945);
+    
     height: 100vh;
     width: 100%;
     position: absolute;
-
+    cursor: pointer;
     z-index: 100;
     /* display: none; */
     visibility: hidden;
+}
+.mobile-navbar:hover{
+    cursor:pointer;
 }
 .nav-select
 {
     visibility: visible;
     transition: 1s;
+}
+.mobile-navbar span{
+    position: absolute;
+    font-size: 3rem;
+    top:10%;
+    left: 45%;
+    /* width: 1; */
+    text-align: center;
+    background-color: white;
+    border-radius: 50%;
+
 }
 
 
