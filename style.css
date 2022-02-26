@@ -550,12 +550,14 @@ body{
 .actual-project .small-img{
     position: absolute;
     top: 50%;
-    left: 20%;
+    left: 10%;
+    border-radius: 10px;
+
     height: 13rem;
     max-width: 20rem;
     min-width: 5rem;
-    /* width: 10rem; */
-    /* border-radius: 15r; */
+    box-shadow: 30px 28px 28px rgba(238, 238, 238, 0.048), 0 10px 10px rgba(255, 255, 255, 0.22);
+    
 }
 
 .actual-project .small-img img{
@@ -775,7 +777,7 @@ body{
     padding: 20px;
     background: #fff;
     border-radius: 5px;
-    width: 30%;
+    width: 80%;
     position: relative;
     transition: all 2s ease-in-out;
   }

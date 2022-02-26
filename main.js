@@ -48,7 +48,8 @@ $(document).ready(function () {
 
         }, 1000);
     });
-    $(".hire-me").click(function () {
+    $(".talk").click(function () {
+        close.click();
         $('html, body').animate({
             scrollTop: $("#contact").offset().top,
 
