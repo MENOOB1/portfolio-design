@@ -424,7 +424,20 @@ body{
     margin: 2rem;
     margin-left: 0px;
     border-radius: 5%;
+    /* display: flex;
+    justify-content: end;
+    align-items: flex-end; */
+    position: relative;
 
+}
+.actual-project:hover{
+    
+}
+.actual-project p{
+    text-transform: uppercase;
+    /* font- */
+    margin-left:2rem ;
+    font-weight: 600;
 }
 .project-area .btn{
     display: flex;
@@ -527,6 +540,28 @@ body{
 .element img{
     height: 100%;
     width: 100%;
+}
+.actual-project .img{
+    opacity: 0.5;
+    border-radius: 20px;
+    height: 90%;
+    width: 100%;
+}
+.actual-project .small-img{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    height: 13rem;
+    max-width: 20rem;
+    min-width: 5rem;
+    /* width: 10rem; */
+    /* border-radius: 15r; */
+}
+
+.actual-project .small-img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
 }
 
 @media (max-width:900px){
@@ -720,13 +755,41 @@ body{
     }
 }
 
-.navbar_fixed{
+.overlay {
     position: fixed;
-    width: 100%;
-    top: -1px;
-    left: 0; right: 0;
-    background: #ffffff;
-    box-shadow: var(--box-shadow);
-    z-index: 999;
-    transition: background 1s ease;
-}
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 2s ease-in-out;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }

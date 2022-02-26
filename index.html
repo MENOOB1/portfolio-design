@@ -25,28 +25,42 @@
 
 
                 <div class="left-btn mobile" data-aos="fade-left">
-                    <span class="material-icons close" >
+                    <span class="material-icons close">
                         cancel
                     </span>
-                    <a  class="home ">home</a>
-                    <a  class="project">project</a>
-                    <a  class="exp">Experience</a>
-                    <a  class="about">about</a>
-                    <a  class="talk">Lets talk</a>
+                    <a class="home ">home</a>
+                    <a class="project">project</a>
+                    <a class="exp">Experience</a>
+                    <a class="about">about</a>
+                    <a href="#popup1" class="talk">Lets talk</a>
 
                 </div>
             </div>
+
+
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h2>Here i am</h2>
+                    <a class="close" href="#">&times;</a>
+                    <div class="content">
+                        Thank to pop me out of that button, but now i'm done so you can close this window.
+                    </div>
+                </div>
+            </div>
+
+
             <div class="banner-page-item">
-                <div class="nav-bar">
+                <div class="nav-bar navbar_fixed">
                     <!-- <p><img src="./jhalar.png" alt=""></p> -->
                     <div class="left-btn selected">
-                        <a  class="home">home</a>
-                        <a  class="project">project</a>
-                        <a  class="exp">Experience</a>
-                        <a  class="about">about</a>
+                        <a class="home">home</a>
+                        <a class="project">project</a>
+                        <a class="exp">Experience</a>
+                        <a class="about">about</a>
                     </div>
                     <div class="right-btn">
-                        <a href="" class="">let's talk</a>
+                        <a href="#popup1" class="talk">Lets talk</a>
+
                     </div>
                     <div class="hamburg" style="display: none;">
                         <span class="material-icons menu">
@@ -88,15 +102,29 @@
                     <!-- <div class="para-text">MY Special Projects</div> -->
                 </div>
                 <div class="project-list">
-                    <div class="box tilt" data-aos="fade">
+                    <div class="box tilt" >
                         <p>spreadsheeter</p>
                         <img src="./images/bubble.png" class="bubble" alt="">
                         <img src="./images/tab(1).png" class="tab" alt="">
                     </div>
 
                     <div class="two-projects ">
-                        <div class="actual-project" data-aos="fade-right"></div>
-                        <div class="actual-project" data-aos="fade-left"></div>
+                        <div class="actual-project" data-aos="fade-right" style="background-color: #ABA8A9;">
+                            <p style="color: #ffffffce;" >weather app</p>
+                            <img src="./images/page1.png" class="img">
+                            <div class="small-img">
+                                <img src="./images/page1 (copy).png" alt="">
+                            </div>
+                        </div>
+                        <div class="actual-project" data-aos="fade-left" style="background-color: #19161F;">
+                            <p style="color: #ffffffce;" >7seas </p>
+
+                            <img src="./images/page2.png" alt="" class="img">
+                            <div class="small-img">
+                                <img src="./images/Screenshot from 2022-02-26 16-08-40.png" alt="">
+                            </div>
+                            
+                        </div>
                     </div>
                     <div class="btn">
                         <div class="get-cv-btn"> PROJECT <div>></div>
@@ -107,7 +135,7 @@
         </section>
 
         <!-- Technologies -->
-        <section class="tech" >
+        <section class="tech">
             <!-- technology language -->
             <div class="technology-title">
                 Technology
