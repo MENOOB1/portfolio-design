@@ -106,13 +106,13 @@ body{
     /* background-color: red; */
     width: 50%;
 }
-.banner-intro .banner-logo img{
+.banner-intro .banner-logo .anime{
     width: 100%;
     min-width: 10rem;
-    max-width: 40rem;
-    height: 30rem;
-    min-height:10rem;
-    max-height:30rem ;
+    max-width: 90rem;
+    height: 20rem;
+    /* min-height:10rem;
+    max-height:40rem ; */
 }
 /* social design */
 
@@ -155,23 +155,49 @@ body{
         padding-top:3rem;
         width: 100%;
         overflow-x: hidden;
+        /* flex-direction: ; */
+    }
+    .banner-intro{
+        display: flex;
+        flex-direction: column-reverse;
     }
     .main-text
     {
         font-size: 2rem;
         width: 100%;
+        /* display: none; */
+    }
+    .basic-Intro .main-text{
+        /* display: block; */
+        width: 20rem;
+        position: absolute;
+        top: 12%;
+    }
+    .basic-Intro .sec-text{
+        position: absolute;
+        top: 16%;
     }
     .sec-text{
         font-size: 2.5rem;
+        /* display: none; */
     }
     .para-text{
         font-size: 14px;
+        display: none;
     }
     .banner-logo{
-       display: none;
+       /* display: none; */
+       width: 100%;
+       height: 60%;
+    }
+    .banner-intro .btn{
+        margin-top: -5rem;
+        margin-bottom: 2rem;
+        /* display: none; */
     }
     .banner-page-item{
         padding: 0px;
+        /* flex-direction: row; */
     }
     .nav-bar .left-btn{
         background-color: red;
@@ -767,6 +793,7 @@ body{
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
+    z-index: 100;
   }
   .overlay:target {
     visibility: visible;
