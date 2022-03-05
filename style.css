@@ -71,13 +71,11 @@ body{
 
 }
 .get-cv-btn{
-    /* border: 1px solid red; */
     width: 12rem;
     height: 4rem;
     margin-top: 4rem;
     font-size: 1.5rem;
     font-weight: 700;
-    /* text-align: center; */
     padding-left: 1rem;
     display: flex;
     justify-content: flex-start;
@@ -87,7 +85,6 @@ body{
     background-color: rgba(26, 26, 88, 0.945);
     transition: 1s;
     cursor: pointer;
-    /* z-index: 100; */
 }
 .get-cv-btn div{
     width: 50%;
@@ -310,7 +307,6 @@ body{
     position: absolute;
     cursor: pointer;
     z-index: 100;
-    /* display: none; */
     visibility: hidden;
     
 }
@@ -327,7 +323,6 @@ body{
     font-size: 3rem;
     top:20%;
     left: 50%;
-    /* width: 1; */
     text-align: center;
     background-color: white;
     border-radius: 50%;
