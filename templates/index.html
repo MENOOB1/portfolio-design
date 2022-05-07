@@ -60,24 +60,25 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form>
+                            <form action="/" method="POST"> {% csrf_token %}
                                 <div class="pop-name">
                                     <label for="pop-name">Name</label>
-                                    <input type="text">
+                                    <input type="text" name="name" required>
                                 </div>
                                 <div class="pop-email">
                                     <label for="pop-email">Email</label>
-                                    <input type="email">
+                                    <input type="email" name="email" required>
                                 </div>
                                 <div class="pop-message">
                                     <label for="pop-message">Message</label>
-                                    <input type="message">
+                                    <input type="message" name="message" required>
                                 </div>
-                            </form>
+
                         </div>
                         <div class="modal-footer" style="border: none;">
-                            <button type="button" class="popup-submit">Send message</button>
+                            <button type="submit" class="popup-submit">Send message</button>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -95,24 +96,24 @@
                     </p>
                 </div>
                 <a href="{{resu.resume.url}}" download style="text-decoration: none;">
-                <div class="btn">
-                    <div class="get-cv-btn"> GET CV <div>></div>
-                    </div>
+                    <div class="btn">
+                        <div class="get-cv-btn"> GET CV <div>></div>
+                        </div>
                 </a>
-                </div>
-            </div>
-            <div class="banner-logo">
-                <lottie-player class="anime" src="https://assets4.lottiefiles.com/packages/lf20_m9fz64i8.json"
-                    background="#FAFAFF" speed="1" loop autoplay>
-                </lottie-player>
             </div>
         </div>
-        <div class="social-links">
-            <div class="circle fir"> <i class="fab fa-github fa-2x"></i></div>
-            <div class="circle sec"> <i class="fab fa-twitter fa-2x"></i></div>
-            <div class="circle third"> <i class="fab fa-linkedin fa-2x"></i></div>
+        <div class="banner-logo">
+            <lottie-player class="anime" src="https://assets4.lottiefiles.com/packages/lf20_m9fz64i8.json"
+                background="#FAFAFF" speed="1" loop autoplay>
+            </lottie-player>
+        </div>
+    </div>
+    <div class="social-links">
+        <div class="circle fir" onclick="location.href='https://github.com/rohitverma1222';"> <i class="fab fa-github fa-2x"></i></div>
+        <div class="circle sec" onclick="location.href='https://twitter.com/rohitverma12002';"> <i class="fab fa-twitter fa-2x"></i></div>
+        <div class="circle third" onclick="location.href='https://www.linkedin.com/in/rohit-verma-7408b51ab/';"> <i class="fab fa-linkedin fa-2x"></i></div>
 
-        </div>
+    </div>
     </div>
     <div class="social-links fix-message">
         <div class="circle fir" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-envelope fa-2x"
@@ -137,14 +138,13 @@
 
             <div class="two-projects ">
                 {% for i in proj %}
-                <div class="actual-project" data-aos="fade-right"  data-toggle="modal"
-                    data-target="#proj">
+                <div class="actual-project" data-aos="fade-right" data-toggle="modal" data-target="#proj">
 
                     <img src="{{i.mainImg.url}}" value="{{i.mainImg.url}}" class="pro img">
                     <p style="display: none" class="desc">{{i.desc}}</p>
                     <p style="display: none" class="livelink">{{i.live_link}}</p>
                     <p style="display: none" class="githublink">{{i.github_link}}</p>
-                    <p  class="title">{{i.title}}</p>
+                    <p class="title">{{i.title}}</p>
                 </div>
 
                 {% endfor %}
@@ -172,8 +172,8 @@
                         <img src="" id="popImage" alt="">
                     </div>
                     <div class="tags">
-                        <div class="small-icons">JAVA</div>
-                        <div class="small-icons">JAVA</div>
+                        <div class="small-icons">HTML</div>
+                        <div class="small-icons">CSS</div>
 
                     </div>
                     <div class="project-des">
@@ -207,19 +207,19 @@
                         <img src="{% static './images/page1.png' %}" alt="">
                     </div>
                     <div class="tags">
-                        <div class="small-icons">JAVA</div>
-                        <div class="small-icons">JAVA</div>
+                        <div class="small-icons">Django/python</div>
+                        <div class="small-icons">HTML/CSS</div>
+                        <div class="small-icons">JavaScript</div>
+                        <div class="small-icons">Sqlite</div>
 
                     </div>
                     <div class="project-des">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt impedit sunt cupiditate
-                            iusto
-                            commodi voluptatibus nulla doloremque, eveniet iste laborum quis, architecto ea? Temporibus
-                            optio tenetur deleniti, dolore id nobis.</p>
+                        <p>A spreadsheet Application which allows users to organize, format and calculate data with
+                            formulas using a spreadsheet system </p>
                     </div>
                     <div class="project-link">
-                        <i class="fa fa-link fa-2x" aria-hidden="true"></i>
-                        <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                        <a href="https://excel-clone-e.herokuapp.com/" ><i class="fa fa-link fa-2x" aria-hidden="true"></i></a>
+                        <a href="https://github.com/rohitverma1222/SpreadSheeter" ><i class="fab fa-github fa-2x" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <!-- footer -->
@@ -287,7 +287,7 @@
                 <div class="company-worked-description">
                     <p>{{i.position}}</p>
                     <p class="position">{{i.comp_pos}}</p>
-                    <p style="display: none; font-weight: 300 !important;" id="description">{{i.work_desc|linebreaksbr }}</p>
+                    <p style="display: none; font-weight: 300 !important;" id="description">{{i.work_desc|linebreaksbr}}</p>
                     <h6 style="font-weight: 300 !important;" id="fill_descrption"></h6>
 
                 </div>

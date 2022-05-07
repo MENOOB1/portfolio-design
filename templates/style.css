@@ -666,7 +666,7 @@ ul li{
     overflow-x: hidden;
     margin: 5rem;
     background-color: #FAFAFF;
-    height:20rem;
+    height:auto;
     width: 50%;
     display: flex;
     justify-content: center;
@@ -1409,6 +1409,10 @@ form input{
 }
 .tags{
     padding-top: 1rem;
+}
+a{
+    text-decoration:none ;
+    color: inherit;
 }
 .tags .small-icons{
     background-color: red;
