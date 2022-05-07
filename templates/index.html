@@ -1,0 +1,367 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- icons CDN -->
+
+    <!-- bootsrap links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <!-- starting page -->
+        <section class="banner-page">
+
+        </section>
+    </div>
+
+    <div class="banner-page-item">
+        <div class="nav-bar navbar_fixed">
+            <div class="left-btn selected">
+                <a class="home">home</a>
+                <a class="project">project</a>
+                <a class="exp">Experience</a>
+                <a class="about">about</a>
+            </div>
+            <div class="right-btn">
+                <a class="talk" data-toggle="modal" data-target="#exampleModal">Lets talk</a>
+            </div>
+
+            <!-- pop up for contact  -->
+            <div class="modal fade edit" id="exampleModal" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog dialog" role="document">
+                    <div class="modal-content content">
+                        <div class="modal-header" style="border: none;">
+                            <h5 class="modal-title" id="exampleModalLabel">ANY MESSAGE 💬</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true" style="color: white;">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="pop-name">
+                                    <label for="pop-name">Name</label>
+                                    <input type="text">
+                                </div>
+                                <div class="pop-email">
+                                    <label for="pop-email">Email</label>
+                                    <input type="email">
+                                </div>
+                                <div class="pop-message">
+                                    <label for="pop-message">Message</label>
+                                    <input type="message">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer" style="border: none;">
+                            <button type="button" class="popup-submit">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="banner-intro">
+            <div class="basic-Intro">
+                <div class="main-text" data-aos="fade-right">Heyy</div>
+                <div class="sec-text" data-aos="fade-right">i'm rohit</div>
+                <div class="para-text" data-aos="fade-right">
+                    <p> <span>A full stack Developer</span><br>
+                        I enjoy taking complex problems and turning them into simple and easily understandable
+                        code.I also love the logic and structure of coding and always strive to write and learn
+                        the efficient code.
+                    </p>
+                </div>
+                <a href="{{resu.resume.url}}" download style="text-decoration: none;">
+                <div class="btn">
+                    <div class="get-cv-btn"> GET CV <div>></div>
+                    </div>
+                </a>
+                </div>
+            </div>
+            <div class="banner-logo">
+                <lottie-player class="anime" src="https://assets4.lottiefiles.com/packages/lf20_m9fz64i8.json"
+                    background="#FAFAFF" speed="1" loop autoplay>
+                </lottie-player>
+            </div>
+        </div>
+        <div class="social-links">
+            <div class="circle fir"> <i class="fab fa-github fa-2x"></i></div>
+            <div class="circle sec"> <i class="fab fa-twitter fa-2x"></i></div>
+            <div class="circle third"> <i class="fab fa-linkedin fa-2x"></i></div>
+
+        </div>
+    </div>
+    <div class="social-links fix-message">
+        <div class="circle fir" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-envelope fa-2x"
+                aria-hidden="true"></i></div>
+    </div>
+    </section>
+    <section class="project-area">
+        <div class="project-container">
+            <div class="project-heading">
+                <div class="sec-text ">My Projects</div>
+                <!-- <div class="para-text">MY Special Projects</div> -->
+            </div>
+            <div class="project-list" data-toggle="modal" data-target="#SpreadSheeter">
+                <div class="box tilt">
+                    <p>spreadsheeter</p>
+                    <img src="{% static './images/bubble.png' %}" class="bubble" alt="">
+                    <img src="{% static './images/tab(1).png' %}" class="tab" alt="">
+                </div>
+
+
+            </div>
+
+            <div class="two-projects ">
+                {% for i in proj %}
+                <div class="actual-project" data-aos="fade-right"  data-toggle="modal"
+                    data-target="#proj">
+
+                    <img src="{{i.mainImg.url}}" value="{{i.mainImg.url}}" class="pro img">
+                    <p style="display: none" class="desc">{{i.desc}}</p>
+                    <p style="display: none" class="livelink">{{i.live_link}}</p>
+                    <p style="display: none" class="githublink">{{i.github_link}}</p>
+                    <p  class="title">{{i.title}}</p>
+                </div>
+
+                {% endfor %}
+            </div>
+            <div class="project-btn btn">
+                <div class="get-cv-btn "> MORE <div>></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <div class="modal fade project-edit" id="proj" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog project-dialog" role="document">
+            <div class="modal-content project-content">
+                <div class="modal-header" style="border: none;">
+                    <h5 class="modal-title" id="projectModalLabel">djkbfk</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="color: white;">&times;</span>
+                    </button>
+                </div>
+                <!-- main content -->
+                <div class="modal-body">
+                    <div class="img">
+                        <img src="" id="popImage" alt="">
+                    </div>
+                    <div class="tags">
+                        <div class="small-icons">JAVA</div>
+                        <div class="small-icons">JAVA</div>
+
+                    </div>
+                    <div class="project-des">
+                        <p class="pop-desc" style="height: 100%; width: 100%;">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Exercitationem ea accusamus voluptas numquam consectetur voluptatem
+                            voluptates, incidunt modi amet harum. Dignissimos porro nostrum rerum quasi a temporibus,
+                            suscipit magni. Ab!</p>
+                    </div>
+                    <div class="project-link">
+                        <a href="" class="pop-live"><i class="fa fa-link fa-2x" aria-hidden="true"></i></a>
+                        <a href="" class="pop-github"><i class="fab fa-github fa-2x" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <!-- footer -->
+            </div>
+        </div>
+    </div>
+    <div class="modal fade project-edit" id="SpreadSheeter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog project-dialog" role="document">
+            <div class="modal-content project-content">
+                <div class="modal-header" style="border: none;">
+                    <h5 class="modal-title" id="exampleModalLabel">SpreadSheeter ⌨</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="color: white;">&times;</span>
+                    </button>
+                </div>
+                <!-- main content -->
+                <div class="modal-body">
+                    <div class="img">
+                        <img src="{% static './images/page1.png' %}" alt="">
+                    </div>
+                    <div class="tags">
+                        <div class="small-icons">JAVA</div>
+                        <div class="small-icons">JAVA</div>
+
+                    </div>
+                    <div class="project-des">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt impedit sunt cupiditate
+                            iusto
+                            commodi voluptatibus nulla doloremque, eveniet iste laborum quis, architecto ea? Temporibus
+                            optio tenetur deleniti, dolore id nobis.</p>
+                    </div>
+                    <div class="project-link">
+                        <i class="fa fa-link fa-2x" aria-hidden="true"></i>
+                        <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <!-- footer -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Technologies -->
+    <section class="tech">
+        <!-- technology language -->
+        <div class="technology-title">
+            Technology
+        </div>
+        <div class="sub-heading"> i worked on</div>
+
+        <div class="lang">
+            <div class="one" data-aos="fade-left">
+                <div class="element " data-tilt>
+                    <img src="{% static './images/java.png' %}" alt="">
+                </div>
+            </div>
+            <div class="two" data-aos="fade-right">
+                <div class="element" data-tilt>
+                    <img src="{% static './images/sql.png' %}" alt="">
+                </div>
+                <div class="element" data-tilt>
+                    <img src="{% static './images/jquert.png' %}" alt="">
+                </div>
+            </div>
+            <div class="three" data-aos="fade-out">
+                <div class="element" data-tilt>
+                    <img src="{% static './images/django.png' %}" alt="">
+                </div>
+                <div class="element" data-tilt>
+                    <img src="{% static './images/cpp.png' %}" alt="">
+                </div>
+                <div class="element" data-tilt>
+                    <img src="{% static './images/html.png' %}" alt="">
+                </div>
+            </div>
+            <div class="two" data-aos="fade-left">
+                <div class="element" data-tilt>
+                    <img src="{% static './images/boot.png' %}" alt="">
+                </div>
+                <div class="element" data-tilt>
+                    <img src="{% static './images/js.png' %}" alt="">
+                </div>
+            </div>
+            <div class="one" data-aos="fade-right">
+                <div class="element" data-tilt>
+                    <img src="{% static './images/react.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience  -->
+        <div class="experience" data-aos="fade-right">
+            <div class="technology-title">
+                Experience
+            </div>
+            <div class="sub-heading"> where i worked</div>
+            {% for i in exp %}
+            <div class="company" data-aos="fade-left">
+                <!-- <img src="{% static './images/bg.png' %}" alt=""> -->
+                <div class="company-worked-description">
+                    <p>{{i.position}}</p>
+                    <p class="position">{{i.comp_pos}}</p>
+                    <p style="display: none; font-weight: 300 !important;" id="description">{{i.work_desc|linebreaksbr }}</p>
+                    <h6 style="font-weight: 300 !important;" id="fill_descrption"></h6>
+
+                </div>
+            </div>
+            {% endfor %}
+            <div class="btn">
+                <div class="get-cv-btn exp" style="color: white !important;"> MORE <div>></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer">
+            <div class="contact">
+                <div class="why">why aren't we talking
+                    <div class="subheading">
+                        i would love to work with you let's talk
+                    </div>
+                </div>
+                <div class="btn">
+                    <div class="get-cv-btn" data-toggle="modal" data-target="#exampleModal"> contact <div>></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-detail">
+                <div class="name">Rohit
+                    <span>A full stack developer</span>
+                </div>
+                <div class="footer-menu-list">
+                    <a href="">home</a>
+                    <a href="">project</a>
+                    <a href="">Experience</a>
+                    <a href="">about</a>
+                </div>
+                <div class="footer-social">
+                    follow us
+                    <a href="">facebook</a>
+                    <a href="">linkdin</a>
+                    <a href="">instagram</a>
+                    <a href="">codepen</a>
+                    <a href="">github</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div>
+</body>
+<script src="{% static './jquery.js' %}"></script>
+<script src="{% static 'fun.js' %}" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://unpkg.com/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<!-- bootstrap js -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script>
+    AOS.init({
+        offset: 350, // offset (in px) from the original trigger point
+        //   delay: 2, // values from 0 to 3000, with step 50ms
+        duration: 1000,
+    });
+
+
+
+</script>
+
+</html>
